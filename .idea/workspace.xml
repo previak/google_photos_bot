@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="feat: auth and photo upload v1">
-      <change afterPath="$PROJECT_DIR$/app/database/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/requests.py" afterDir="false" />
+    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="feat: auth and photo upload v2">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff/storage_v2/_src_/database/google_photos_db.djKlDw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff/storage_v2/_src_/database/google_photos_db.djKlDw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init-db/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init-db/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init-db/init.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719922443937</updated>
-      <workItem from="1719922446919" duration="43703000" />
+      <workItem from="1719922446919" duration="44489000" />
     </task>
     <task id="LOCAL-00001" summary="feat: auth and photo upload v1">
       <option name="closed" value="true" />
@@ -177,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720046239542</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: auth and photo upload v2">
+      <option name="closed" value="true" />
+      <created>1720297344475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720297344475</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: auth and photo upload v2">
+      <option name="closed" value="true" />
+      <created>1720297359998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720297359998</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,10 +198,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: auth and photo upload v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: auth and photo upload v1" />
+    <MESSAGE value="feat: auth and photo upload v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: auth and photo upload v2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/google_photos_bot$server.coverage" NAME="server Coverage Results" MODIFIED="1720015716664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1720296485342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1720297948885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -6,7 +6,7 @@ from aiogram import Bot, Dispatcher
 from config import TOKEN
 from app.handlers import router
 from app.server import start_webhook
-from app.database.models import async_main
+from app.database.models.base import async_main
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -19,8 +19,7 @@ async def on_startup():
 async def main():
     await async_main()
     dp.include_router(router)
-    loop = asyncio.get_event_loop()
-    await loop.create_task(on_startup())
+    await on_startup()
     await dp.start_polling(bot, skip_updates=True)
 
 

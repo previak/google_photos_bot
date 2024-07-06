@@ -1,8 +1,12 @@
-TOKEN = '7295243161:AAGWTrBnFzFI7PC4LigQBneuTWU6UA89pkk'
-CLIENT_SECRETS_FILE = 'client_secret.json'
-SCOPES = ['https://www.googleapis.com/auth/photoslibrary',
-          'https://www.googleapis.com/auth/photoslibrary.sharing']
-REDIRECT_URI = 'http://localhost:8000/callback'
-UPLOAD_URL = 'https://photoslibrary.googleapis.com/v1/uploads'
-CREATE_URL = 'https://photoslibrary.googleapis.com/v1/mediaItems:batchCreate'
-DB_URL = 'postgresql+asyncpg://postgres:postgres@localhost/google_photos_db'
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TOKEN = os.getenv('TOKEN')
+CLIENT_SECRETS_FILE = os.getenv('CLIENT_SECRETS_FILE')
+SCOPES = os.getenv('SCOPES').split(',')
+REDIRECT_URI = os.getenv('REDIRECT_URI')
+UPLOAD_URL = os.getenv('UPLOAD_URL')
+CREATE_URL = os.getenv('CREATE_URL')
+DB_URL = os.getenv('DB_URL')

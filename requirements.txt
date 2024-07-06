@@ -1,0 +1,8 @@
+aiogram
+aiohttp
+sqlalchemy
+asyncpg
+google-auth
+google-auth-oauthlib
+requests
+python-dotenv

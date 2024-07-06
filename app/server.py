@@ -1,5 +1,6 @@
 from aiohttp import web
-from app.service import fetch_token
+
+from app.services.auth import fetch_token
 from app.database.requests import get_tg_id_by_state
 
 
@@ -16,8 +17,8 @@ async def handle_callback(request):
 
         if await fetch_token(tg_id, state, code):
             bot = request.app['bot']
-            await bot.send_message(tg_id, "Авторизация прошла успешно!"
-                                          " Загружай свои фотографии с помощью команды /photo")
+            await bot.send_message(tg_id, "Авторизация прошла успешно! "
+                                          "Загружай свои фотографии с помощью команды /photo")
 
     except ValueError as e:
         return web.Response(text=str(e), status=400)

@@ -1,8 +1,11 @@
 import json
-from app.database.models import async_session
-from app.database.models import UserCred, UserFlow, User
-from sqlalchemy import select, update, delete
+from sqlalchemy import select
 from sqlalchemy.orm import joinedload
+
+from .models.base import async_session
+from .models.user import User
+from .models.user_cred import UserCred
+from .models.user_flow import UserFlow
 
 
 async def set_user(tg_id):

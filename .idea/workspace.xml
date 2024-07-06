@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="feat: auth and photo upload v2.1">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/models/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/models/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/models/user_cred.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database/models/user_flow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff/storage_v2/_src_/database/google_photos_db.djKlDw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c590ad92-ee75-44b3-af74-9944a4ded7ff/storage_v2/_src_/database/google_photos_db.djKlDw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-    </list>
+    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719922443937</updated>
-      <workItem from="1719922446919" duration="46410000" />
+      <workItem from="1719922446919" duration="46730000" />
     </task>
     <task id="LOCAL-00001" summary="feat: auth and photo upload v1">
       <option name="closed" value="true" />
@@ -213,17 +190,38 @@
       <option name="project" value="LOCAL" />
       <updated>1720298155343</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: better decomposition">
+      <option name="closed" value="true" />
+      <created>1720299996493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720299996493</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: gitignore">
+      <option name="closed" value="true" />
+      <created>1720300192876</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720300192876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: auth and photo upload v1" />
     <MESSAGE value="feat: auth and photo upload v2" />
     <MESSAGE value="feat: auth and photo upload v2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: auth and photo upload v2.1" />
+    <MESSAGE value="feat: better decomposition" />
+    <MESSAGE value="fix: gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/google_photos_bot$server.coverage" NAME="server Coverage Results" MODIFIED="1720015716664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

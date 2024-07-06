@@ -1,7 +1,7 @@
 CREATE TABLE user_flows (
     user_id BIGINT PRIMARY KEY,
     state TEXT,
-    flow BYTEA
+    flow TEXT
 );
 
 CREATE TABLE user_creds (

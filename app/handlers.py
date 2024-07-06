@@ -1,24 +1,26 @@
 import os
+import app.database.requests as rq
 
 from aiogram import Router
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from auth import get_authorization_url, upload_photo, user_creds
+from app.service import get_authorization_url, upload_photo
 
 router = Router()
 
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
+    await rq.set_user(message.from_user.id)
     await message.reply(
-        "Привет! Отправь мне фото, и я загружу его в твой Google Photos. Используй команду /authorize для начала."
-    )
+        "Привет! Отправь мне фото, и я загружу его в твой Google Photos. Используй команду /authorize для начала.")
+
 
 
 @router.message(Command('authorize'))
 async def cmd_authorize(message: Message):
-    authorization_url = get_authorization_url(message.from_user.id)
+    authorization_url = await get_authorization_url(message.from_user.id)
 
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text='Авторизоваться', url=authorization_url)],
@@ -29,7 +31,9 @@ async def cmd_authorize(message: Message):
 
 @router.message(Command('photo'))
 async def cmd_photo(message: Message):
-    if message.from_user.id not in user_creds:
+    user_creds = await rq.get_user_credentials(message.from_user.id)
+
+    if not user_creds:
         await message.reply("Пожалуйста, сначала авторизуйтесь с помощью команды /authorize")
         return
 
@@ -40,7 +44,7 @@ async def cmd_photo(message: Message):
 
     await message.bot.download_file(file_path, destination)
 
-    response = upload_photo(message.from_user.id, destination)
+    response = await upload_photo(message.from_user.id, destination)
     os.remove(destination)
 
     if response:

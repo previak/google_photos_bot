@@ -1,29 +1,31 @@
 import os
 from google_auth_oauthlib.flow import Flow
-from google.oauth2.credentials import Credentials
 import requests
 from config import SCOPES, CLIENT_SECRETS_FILE, REDIRECT_URI, UPLOAD_URL, CREATE_URL
+import app.database.requests as rq
 
-user_flows = {}
-user_creds = {}
 
-def get_authorization_url(user_id):
+async def get_authorization_url(tg_id):
     flow = Flow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
     flow.redirect_uri = REDIRECT_URI
-    authorization_url, state = flow.authorization_url(prompt='consent', access_type='offline', include_granted_scopes='true')
-    user_flows[user_id] = (flow, state)
+    authorization_url, state = flow.authorization_url(prompt='consent',
+                                                      access_type='offline',
+                                                      include_granted_scopes='true')
+    await rq.set_user_flow(tg_id, flow, state)
     return authorization_url
 
-def fetch_token(user_id, state, code):
-    flow, stored_state = user_flows.get(user_id, (None, None))
+
+async def fetch_token(tg_id, state, code):
+    flow, stored_state = await rq.get_user_flow_and_state(tg_id)
     if flow and stored_state == state:
         flow.fetch_token(code=code)
-        user_creds[user_id] = flow.credentials
+        await rq.set_user_cred(tg_id, flow.credentials)
         return True
     return False
 
-def upload_photo(user_id, photo_path):
-    creds = user_creds.get(user_id)
+
+async def upload_photo(tg_id, photo_path):
+    creds = await rq.get_user_credentials(tg_id)
     if creds:
         headers = {
             'Authorization': f'Bearer {creds.token}',
@@ -49,7 +51,8 @@ def upload_photo(user_id, photo_path):
                 ]
             }
 
-            create_response = requests.post(CREATE_URL, headers={'Authorization': f'Bearer {creds.token}'}, json=create_body)
+            create_response = requests.post(CREATE_URL,
+                                            headers={'Authorization': f'Bearer {creds.token}'}, json=create_body)
 
             if create_response.status_code == 200:
                 return create_response.json()

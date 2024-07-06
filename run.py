@@ -5,7 +5,8 @@ from aiogram import Bot, Dispatcher
 
 from config import TOKEN
 from app.handlers import router
-from server import start_webhook
+from app.server import start_webhook
+from app.database.models import async_main
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -16,6 +17,7 @@ async def on_startup():
 
 
 async def main():
+    await async_main()
     dp.include_router(router)
     loop = asyncio.get_event_loop()
     await loop.create_task(on_startup())

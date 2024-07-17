@@ -11,6 +11,18 @@ services:
       - db_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    restart: on-failure
+
+  bot:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - ./.env
+    restart: always
+    depends_on:
+      - db
+
 
 volumes:
   db_data:

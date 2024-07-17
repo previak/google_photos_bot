@@ -5,22 +5,21 @@ from aiogram import Bot, Dispatcher
 
 from config import TOKEN
 from app.handlers import router
-from app.server import start_webhook
 from app.database.models.base import async_main
+
+logger = logging.getLogger(__name__)
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 
-async def on_startup():
-    await start_webhook(dp, bot)
-
-
 async def main():
-    await async_main()
-    dp.include_router(router)
-    await on_startup()
-    await dp.start_polling(bot, skip_updates=True)
+    try:
+        await async_main()
+        dp.include_router(router)
+        await dp.start_polling(bot)
+    except Exception as exception:
+        logger.error(f"Произошла ошибка в главной функции: {str(exception)}")
 
 
 if __name__ == '__main__':
@@ -28,4 +27,6 @@ if __name__ == '__main__':
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print('Exit')
+        logger.info('Программа завершена по запросу пользователя.')
+    except Exception as e:
+        logger.error(f"Произошла ошибка при запуске программы: {str(e)}")

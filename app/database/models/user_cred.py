@@ -1,10 +1,14 @@
 import json
 import datetime
+import logging
 from google.oauth2.credentials import Credentials
 from sqlalchemy import BigInteger, Text, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from .base import Base
+from app.database.models.base import Base
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class UserCred(Base):
@@ -17,12 +21,19 @@ class UserCred(Base):
 
     @property
     def credentials_obj(self):
-        cred_dict = json.loads(self.credentials)
-        return self.dict_to_credentials(cred_dict)
+        try:
+            cred_dict = json.loads(self.credentials)
+            return self.dict_to_credentials(cred_dict)
+        except json.JSONDecodeError as e:
+            logger.error(f"Ошибка декодирования JSON: {e}")
+            return None
 
     @credentials_obj.setter
     def credentials_obj(self, credentials):
-        self.credentials = json.dumps(self.credentials_to_dict(credentials))
+        try:
+            self.credentials = json.dumps(self.credentials_to_dict(credentials))
+        except TypeError as e:
+            logger.error(f"Ошибка декодирования JSON: {e}")
 
     @staticmethod
     def credentials_to_dict(credentials):

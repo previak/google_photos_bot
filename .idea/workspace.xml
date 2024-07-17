@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: .html name">
+    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="feat: better code upload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +71,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/handlers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
@@ -165,7 +163,7 @@
       <updated>1719922443937</updated>
       <workItem from="1719922446919" duration="48270000" />
       <workItem from="1720463649547" duration="2486000" />
-      <workItem from="1720637225950" duration="33552000" />
+      <workItem from="1720637225950" duration="34440000" />
     </task>
     <task id="LOCAL-00001" summary="feat: auth and photo upload v1">
       <option name="closed" value="true" />
@@ -239,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721244136453</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: better code upload">
+      <option name="closed" value="true" />
+      <created>1721245930440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721245930440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,10 +262,11 @@
     <MESSAGE value="fix: gitignore" />
     <MESSAGE value="feat: new callback handler" />
     <MESSAGE value="fix: .html name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: .html name" />
+    <MESSAGE value="feat: better code upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: better code upload" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/google_photos_bot$server.coverage" NAME="server Coverage Results" MODIFIED="1720015716664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1721245331974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1721246259301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

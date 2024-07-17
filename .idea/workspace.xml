@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: gitignore">
-      <change afterPath="$PROJECT_DIR$/auth_code.html" afterDir="false" />
+    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: .html name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/models/user_cred.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/models/user_cred.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/models/user_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/models/user_flow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database/requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/handlers/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/photo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/photo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/photo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/photo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +165,7 @@
       <updated>1719922443937</updated>
       <workItem from="1719922446919" duration="48270000" />
       <workItem from="1720463649547" duration="2486000" />
-      <workItem from="1720637225950" duration="31465000" />
+      <workItem from="1720637225950" duration="33552000" />
     </task>
     <task id="LOCAL-00001" summary="feat: auth and photo upload v1">
       <option name="closed" value="true" />
@@ -232,7 +223,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720300254021</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: new callback handler">
+      <option name="closed" value="true" />
+      <created>1721243365480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721243365480</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix: .html name">
+      <option name="closed" value="true" />
+      <created>1721244136453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721244136453</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,10 +254,12 @@
     <MESSAGE value="feat: auth and photo upload v2.1" />
     <MESSAGE value="feat: better decomposition" />
     <MESSAGE value="fix: gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore" />
+    <MESSAGE value="feat: new callback handler" />
+    <MESSAGE value="fix: .html name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: .html name" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/google_photos_bot$server.coverage" NAME="server Coverage Results" MODIFIED="1720015716664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1720979045937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/google_photos_bot$run.coverage" NAME="run Coverage Results" MODIFIED="1721245331974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

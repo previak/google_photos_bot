@@ -1,18 +1,16 @@
 import os
+import logging
+
+import app.database.requests as rq
+
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
-import app.database.requests as rq
+
+from app.handlers.states.photo_upload_state import PhotoUploadState
 from app.services.photo import upload_photo
-import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
-class PhotoUploadState(StatesGroup):
-    waiting_for_photo = State()
-    waiting_for_description = State()
 
 
 async def start_photo_upload(message: Message, state: FSMContext):

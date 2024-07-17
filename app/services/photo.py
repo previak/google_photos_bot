@@ -1,7 +1,9 @@
 import os
 import requests
 import logging
+
 import app.database.requests as rq
+
 from config import UPLOAD_URL, CREATE_URL
 
 logging.basicConfig(level=logging.INFO)

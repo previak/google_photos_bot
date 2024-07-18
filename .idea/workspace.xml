@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: docker now works properly">
+    <list default="true" id="ec518330-c255-4c0e-b83c-fab6fd99ed46" name="Changes" comment="fix: docker-compose vars">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
@@ -197,7 +197,7 @@
       <updated>1719922443937</updated>
       <workItem from="1719922446919" duration="48270000" />
       <workItem from="1720463649547" duration="2486000" />
-      <workItem from="1720637225950" duration="41264000" />
+      <workItem from="1720637225950" duration="43956000" />
     </task>
     <task id="LOCAL-00001" summary="feat: auth and photo upload v1">
       <option name="closed" value="true" />
@@ -319,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721252043908</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix: docker-compose vars">
+      <option name="closed" value="true" />
+      <created>1721328338723</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721328338723</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +350,8 @@
     <MESSAGE value="fix: client_secret now updated" />
     <MESSAGE value="fix: updated .gitignore" />
     <MESSAGE value="fix: docker now works properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: docker now works properly" />
+    <MESSAGE value="fix: docker-compose vars" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: docker-compose vars" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/google_photos_bot$server.coverage" NAME="server Coverage Results" MODIFIED="1720015716664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

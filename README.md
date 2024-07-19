@@ -43,7 +43,7 @@ Google Photos Bot is a tool designed to interact with Google Photos. It helps in
    ```
 4. **Build and run the Docker containers:**
    ```bash
-   docker-compose up --build
+   docker-compose up -d
    ```
 
 ### Usage

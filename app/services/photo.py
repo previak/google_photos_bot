@@ -4,7 +4,7 @@ import logging
 
 import app.database.requests as rq
 
-from config import UPLOAD_URL, CREATE_URL
+from app.config import UPLOAD_URL, CREATE_URL
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

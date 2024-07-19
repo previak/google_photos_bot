@@ -4,7 +4,7 @@ import app.database.requests as rq
 
 from google_auth_oauthlib.flow import Flow
 
-from config import SCOPES, CLIENT_SECRETS_FILE, REDIRECT_URI
+from app.config import SCOPES, CLIENT_SECRETS_FILE, REDIRECT_URI
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

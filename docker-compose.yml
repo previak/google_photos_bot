@@ -14,7 +14,7 @@ services:
     restart: on-failure
 
   bot:
-    build: .
+    build: run
     volumes:
       - .:/usr/src/app
     env_file:

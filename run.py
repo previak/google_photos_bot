@@ -3,7 +3,7 @@ import logging
 
 from aiogram import Bot, Dispatcher
 
-from config import TOKEN
+from app.config import TOKEN
 from app.handlers import router
 from app.database.models.base import async_main
 

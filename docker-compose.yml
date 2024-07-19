@@ -11,7 +11,7 @@ services:
       - db_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    restart: on-failure
+    restart: always
 
   bot:
     build: .

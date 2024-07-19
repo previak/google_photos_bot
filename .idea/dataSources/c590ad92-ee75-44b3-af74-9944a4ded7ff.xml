@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>488</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+13467||-9223372036854775808|c|G
+13467||10|c|G
+13467||10|C|G
+13467||10|T|G</Grants>
+      <IntrospectionStateNumber>495</IntrospectionStateNumber>
       <ServerVersion>13.15</ServerVersion>
-      <StartupTime>1721250925</StartupTime>
+      <StartupTime>1721376883</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1400,7 +1408,7 @@ true posixrules
 13184||10|C|G
 13184||-9223372036854775808|U|G
 13184||10|U|G</Grants>
-      <IntrospectionStateNumber>488</IntrospectionStateNumber>
+      <IntrospectionStateNumber>495</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4731,11 +4739,182 @@ true posixrules
     <schema id="253" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>488</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-07-17.21:24:59</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>495</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-07-19.08:14:53</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>287</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
+    <sequence id="254" parent="253" name="user_creds_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>16393</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>489</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="255" parent="253" name="user_flows_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>16409</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>489</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="256" parent="253" name="users_id_seq">
+      <DasType>bigint|0s</DasType>
+      <ObjectId>16385</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>489</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="257" parent="253" name="user_creds">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>489</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="258" parent="253" name="user_flows">
+      <ObjectId>16411</ObjectId>
+      <StateNumber>489</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="259" parent="253" name="users">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>489</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="260" parent="257" name="id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>nextval(&apos;user_creds_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>489</StateNumber>
+      <SequenceId>16393</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="261" parent="257" name="user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="262" parent="257" name="credentials">
+      <DasType>text|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <foreign-key id="263" parent="257" name="user_creds_user_id_fkey">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16404</ObjectId>
+      <StateNumber>489</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16387</RefTableId>
+    </foreign-key>
+    <index id="264" parent="257" name="user_creds_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16402</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="265" parent="257" name="user_creds_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16403</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <UnderlyingIndexId>16402</UnderlyingIndexId>
+    </key>
+    <column id="266" parent="258" name="id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>nextval(&apos;user_flows_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>489</StateNumber>
+      <SequenceId>16409</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="267" parent="258" name="user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="268" parent="258" name="state">
+      <DasType>text|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="269" parent="258" name="flow">
+      <DasType>text|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <foreign-key id="270" parent="258" name="user_flows_user_id_fkey">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16420</ObjectId>
+      <StateNumber>489</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16387</RefTableId>
+    </foreign-key>
+    <index id="271" parent="258" name="user_flows_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16418</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="272" parent="258" name="user_flows_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16419</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <UnderlyingIndexId>16418</UnderlyingIndexId>
+    </key>
+    <column id="273" parent="259" name="id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>489</StateNumber>
+      <SequenceId>16385</SequenceId>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="274" parent="259" name="tg_id">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>489</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="275" parent="259" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16391</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="276" parent="259" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16392</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>489</StateNumber>
+      <UnderlyingIndexId>16391</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
